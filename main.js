@@ -1,18 +1,23 @@
 $(document).ready(function(){
     $("main div button").click(function(e){
         e.preventDefault();
-        const tarefa = $("#tarefa").val()
-        const item = $(`<li><a href="#">${tarefa}</a></li>`)
-        $(item).appendTo("main ul")
-        $(item).fadeIn(300)
+        const valor = $("#tarefa").val()
+        let span =$(`<a href='#'><span>${valor}</span></a>`)
+        let li = $("<li></li>")
+        
+        
+        $(valor).appendTo(span);
+        $(span).appendTo(li)
+        $(li).appendTo(`ul`)
+        console.log(span)
     })
+
     
 })
 
-
-
 $("a").click(function(){
-    $(this).css("text-decoration","line-through")
+    $(this).toggleClass("done")
     console.log("oi")
-    $("a").attr("text-decoration","line-through")
 })
+
+
