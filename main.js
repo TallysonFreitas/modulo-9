@@ -9,15 +9,12 @@ $(document).ready(function(){
         $(valor).appendTo(span);
         $(span).appendTo(li)
         $(li).appendTo(`ul`)
+        $(li).click(function(){
+            $(this).toggleClass("done");
+        })
         console.log(span)
     })
 
     
 })
-
-$("a").click(function(){
-    $(this).toggleClass("done")
-    console.log("oi")
-})
-
 
